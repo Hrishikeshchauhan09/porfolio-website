@@ -1,0 +1,116 @@
+.resume {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(231, 76, 60, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-section h3,
+.education-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.resume-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.resume-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.resume-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.company-period {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.company {
+  color: var(--secondary-color);
+}
+
+.period {
+  color: #666;
+  font-style: italic;
+}
+
+.resume-item p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.achievements {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.resume-download {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .resume-item {
+    padding: 1.5rem;
+  }
+  
+  .company-period {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
